@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Transcription Viewer - 1792-1809 Yogyakarta Residency Letters</title>
+<style>
+  :root {
+    --bg:#1a1a1a; --panel:#222; --fg:#e0e0e0; --muted:#9a9a9a;
+    --line:#333; --accent:#4a9eff;
+  }
+  * { box-sizing:border-box; }
+  body {
+    background:var(--bg); color:var(--fg); font-family:Arial, sans-serif;
+    margin:0; padding:16px 20px 40px; line-height:1.6;
+  }
+  .wrap { max-width:1600px; margin:0 auto; }
+  .topbar {
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+    border-bottom:1px solid var(--line); padding-bottom:12px; margin-bottom:18px;
+  }
+  .topbar h1 { font-size:1.1rem; margin:0; color:#fff; flex:1 1 260px; }
+  .btn {
+    display:inline-flex; align-items:center; gap:5px; background:#2d2d2d; color:var(--fg);
+    border:1px solid var(--line); border-radius:5px;
+    padding:6px 12px; font-size:.88rem; text-decoration:none; cursor:pointer;
+  }
+  .btn:hover { background:#3a3a3a; border-color:#555; }
+  .btn[aria-disabled="true"] { opacity:.3; pointer-events:none; }
+  .gh-icon { fill: currentColor; width: 16px; height: 16px; }
+  .viewer { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:26px; }
+  .scan-pane {
+    position:relative; display:flex; align-items:center; justify-content:center;
+    overflow:hidden; background:var(--panel); border:1px solid var(--line);
+    border-radius:8px; padding:10px;
+  }
+  .scan-pane img { display:block; width:100%; height:auto; border-radius:5px; cursor:zoom-in; }
+  .scan-tools {
+    position:absolute; top:8px; left:8px; right:8px; display:flex; justify-content:space-between;
+    font-size:.82rem; color:var(--muted); background:rgba(0,0,0,0.4); padding:4px 8px; border-radius:4px;
+  }
+  @media (max-width:900px) { .viewer { grid-template-columns:1fr; } }
+  #transcript-output h1, #transcript-output h2 { color:#fff; }
+  #transcript-output blockquote { border-left:4px solid #555; margin-left:0; padding-left:15px; color:#b0b0b0; }
+  .render-error { background:#2a1414; border:1px solid #ff6b6b55; border-radius:6px; padding:1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="btn" href="index.html">← Index</a>
+    <a class="btn" href="full_transcriptions.html">Full Documentation</a>
+    <a class="btn" href="dictionary.html">Keyword Dictionary</a>
+    <h1 id="doc-title">Loading…</h1>
+    <a class="btn" data-nav="prev" href="#">‹ Prev</a>
+    <a class="btn" data-nav="next" href="#">Next ›</a>
+    <a class="btn" href="https://github.com/feureau/1792-1809_-_Yogya_Residency_Letters" target="_blank" style="margin-left:auto;">
+        <svg class="gh-icon" viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.46-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+        View on GitHub
+    </a>
+  </div>
+
+  <div class="viewer">
+    <div class="scan-pane">
+      <div class="scan-tools">
+        <span id="scan-note">Loading scan…</span>
+      </div>
+      <img id="scan" alt="Scanned page">
+    </div>
+
+    <div class="transcript-pane">
+      <div id="transcript-output">Loading…</div>
+
+      <div style="margin-top:20px;">
+        <a class="btn" data-nav="prev" href="#">‹ Previous page</a>
+        <a class="btn" data-nav="next" href="#">Next page ›</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/transcriptions-data.js?v=1.0.0" defer></script>
+<script src="js/transcriptions-content.js?v=1.0.0" defer></script>
+<script src="js/marked.min.js?v=1.0.0" defer></script>
+<script src="js/viewer.js?v=1.0.0" defer></script>
+</body>
+</html>
