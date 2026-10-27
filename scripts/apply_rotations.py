@@ -9,9 +9,9 @@ OPERATIONS = [
     ("Cover/jpg/IMG_0279.JPG", Image.ROTATE_270, "90 deg CW (binder front cover)"),
     ("Cover/jpg/IMG_0283.JPG", Image.ROTATE_270, "90 deg CW (Carey manuscript index notes)"),
     ("Cover/jpg/IMG_0284.JPG", Image.ROTATE_270, "90 deg CW (Carey manuscript index notes verso)"),
-    ("jpg/IMG_20260618_0109_rotated_180.jpg", Image.ROTATE_180, "180 deg (ANRI Djokjo Brieven 48 f.1)"),
-    ("jpg/IMG_20260618_0110_rotated_180.jpg", Image.ROTATE_180, "180 deg (ANRI Djokjo Brieven 48 f.2)"),
-    ("jpg/IMG_20260618_0111_rotated_180.jpg", Image.ROTATE_90, "90 deg CCW (ANRI Djokjo Brieven 48 f.3)"),
+    ("jpg/IMG_20260618_0109.jpg", Image.ROTATE_180, "180 deg (ANRI Djokjo Brieven 48 f.1)"),
+    ("jpg/IMG_20260618_0110.jpg", Image.ROTATE_180, "180 deg (ANRI Djokjo Brieven 48 f.2)"),
+    ("jpg/IMG_20260618_0111.jpg", Image.ROTATE_90, "90 deg CCW (ANRI Djokjo Brieven 48 f.3)"),
     ("jpg/IMG_20260619_0114.jpg", Image.ROTATE_90, "90 deg CCW (Daendels Plakaatboek pp. 62-63)"),
     ("jpg/IMG_20260619_0115.jpg", Image.ROTATE_270, "90 deg CW (Daendels Plakaatboek pp. 64-65)")
 ]

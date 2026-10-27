@@ -308,7 +308,7 @@ covers_data = {
 
 ### Header & Archival Classification
 
-* **[Leaf Position]:** `Verso of the first lined manuscript leaf (IMG_20260618_0003_rotated_180.jpg)`
+* **[Leaf Position]:** `Verso of the first lined manuscript leaf (IMG_20260618_0003.jpg)`
 * **[Visible Tabs Behind Leaf]:** `1801`, `1806`, `1802`
 * **[Paper Stock]:** `Ruled blue-lined notebook paper with reinforced inner margin`
 
@@ -318,7 +318,7 @@ covers_data = {
 
 | Margin Notes | Main Text |
 | :--- | :--- |
-| **Blank Verso<br>Page** | <b>Verso of First Manuscript Leaf:</b><br><br>Verso of the first lined manuscript leaf (`IMG_20260618_0003_rotated_180.jpg`):<br><br>• Blank ruled notebook paper.<br>• Binding perforations reinforced with clear adhesive tape along the inner margin.<br>• Faint ink show-through from the recto writing (<i>\"LIST OF MSS IN ARSIP NEGARA\"</i>).<br>• Top chronological tabs visible: `1801`, `1806`, `1802`. |
+| **Blank Verso<br>Page** | <b>Verso of First Manuscript Leaf:</b><br><br>Verso of the first lined manuscript leaf (`IMG_20260618_0003.jpg`):<br><br>• Blank ruled notebook paper.<br>• Binding perforations reinforced with clear adhesive tape along the inner margin.<br>• Faint ink show-through from the recto writing (<i>\"LIST OF MSS IN ARSIP NEGARA\"</i>).<br>• Top chronological tabs visible: `1801`, `1806`, `1802`. |
 
 ---
 

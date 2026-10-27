@@ -160,12 +160,9 @@ foreach ($f in $batch1Files) {
 }
 
 # Batch 2 Files
-$batch2Files = Get-ChildItem -Path jpg -Filter "IMG_20260619*.jpg" | Sort-Object { 
-    if ($_.Name -eq "IMG_20260619_0001.jpg") { "IMG_20260619_0001_000" } 
-    else { $_.Name } 
-} | ForEach-Object { $_.BaseName + ".md" }
+$batch2Files = Get-ChildItem -Path jpg -Filter "IMG_20260619*.jpg" | Sort-Object Name | ForEach-Object { $_.BaseName + ".md" }
 
-[void]$sb.AppendLine("# Part III: Batch 2 Research Notes (IMG_20260619_0001 – IMG_20260619_0193)")
+[void]$sb.AppendLine("# Part III: Batch 2 Research Notes (IMG_20260619_0000 – IMG_20260619_0194)")
 [void]$sb.AppendLine("")
 
 foreach ($f in $batch2Files) {

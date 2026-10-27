@@ -267,13 +267,13 @@ def classify_special_file(filename, content):
 
     # 2. Archival Binder Dividers / Tab Sheets
     divider_matches = [
-        ('img_20260618_0001_rotated_180', "Archival binder divider sheet labeled '1806'"),
-        ('img_20260618_0002_rotated_180', "Divider verso and archival serial notation"),
-        ('img_20260618_0062_rotated_180', "Archival binder divider sheet labeled '1796'"),
-        ('img_20260618_0104_rotated_180', "Archival binder divider sheet labeled '1799'"),
-        ('img_20260618_0139_rotated_180', "Archival binder divider sheet labeled '1803'"),
-        ('img_20260618_0172_rotated_180', "Archival binder divider sheet labeled '1805'"),
-        ('img_20260619_0020_rotated_180', "Archival binder divider sheet labeled '1806'"),
+        ('img_20260618_0001', "Archival binder divider sheet labeled '1806'"),
+        ('img_20260618_0002', "Divider verso and archival serial notation"),
+        ('img_20260618_0062', "Archival binder divider sheet labeled '1796'"),
+        ('img_20260618_0104', "Archival binder divider sheet labeled '1799'"),
+        ('img_20260618_0139', "Archival binder divider sheet labeled '1803'"),
+        ('img_20260618_0172', "Archival binder divider sheet labeled '1805'"),
+        ('img_20260619_0020', "Archival binder divider sheet labeled '1806'"),
         ('img_20260619_0060', "Archival binder divider sheet labeled '1807'"),
         ('img_20260619_0104', "Archival binder divider sheet labeled '1808'"),
         ('img_20260619_0162', "Archival binder divider sheet labeled '1809'"),
