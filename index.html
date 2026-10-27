@@ -6,66 +6,230 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>1792-1809 Yogyakarta Residency Letters</title>
-    <link rel="stylesheet" href="css/style.css?v=1.0.0">
+    <title>1792–1809 Yogyakarta Residency Letters</title>
     <style>
-        body { background-color: #1a1a1a; color: #e0e0e0; font-family: Arial, sans-serif; line-height: 1.6; max-width: 1000px; margin: 0 auto; padding: 20px; }
-        .topbar { display: flex; gap: 10px; border-bottom: 1px solid #333; padding-bottom: 15px; margin-bottom: 25px; justify-content: flex-end;}
-        header { background-color: #2d2d2d; padding: 30px; border-radius: 5px; margin-bottom: 30px; border: 1px solid #444; text-align: center; }
+        :root {
+            --bg: #1a1a1a;
+            --panel: #222222;
+            --panel-alt: #2d2d2d;
+            --panel-hover: #333333;
+            --fg: #e0e0e0;
+            --muted: #9a9a9a;
+            --line: #333333;
+            --accent: #4a9eff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 20px 24px 50px;
+        }
+        .topbar {
+            display: flex;
+            gap: 10px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        header {
+            background-color: var(--panel-alt);
+            padding: 35px 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid var(--line);
+            text-align: center;
+        }
         h1, h2 { margin: 0 0 10px 0; }
-        header h1 { color: #ffffff; }
-        header h2 { color: #888888; font-weight: normal; }
-        .description { background-color: #2d2d2d; padding: 15px 20px; border-left: 3px solid #4a9eff; text-align: left; margin-bottom: 30px; color: #cccccc; }
-        .section { background-color: #2d2d2d; padding: 25px; border-radius: 5px; margin-bottom: 20px; border: 1px solid #444; }
-        h3 { color: #ffffff; border-bottom: 2px solid #4a9eff; padding-bottom: 8px; margin-top: 0; }
-        a.btn-link { color: #4a9eff; text-decoration: none; padding: 12px 15px; background-color: #3a3a3a; border-radius: 5px; display: block; transition: all 0.2s ease; }
-        a.btn-link:hover { background-color: #4a9eff; color: #ffffff; text-decoration: underline; }
-        .btn { background: #2d2d2d; color: #e0e0e0; border: 1px solid #444; border-radius: 5px; padding: 8px 14px; text-decoration: none; display: flex; align-items: center; gap: 5px;}
-        .btn:hover { background: #4a9eff; color: #ffffff; }
-        .gh-icon { fill: currentColor; width: 16px; height: 16px; }
+        header h1 {
+            color: #ffffff;
+            font-size: 2.1rem;
+            letter-spacing: -0.5px;
+        }
+        header h2 {
+            color: var(--muted);
+            font-size: 1.15rem;
+            font-weight: normal;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: var(--panel-alt);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.15s ease, border-color 0.15s ease;
+        }
+        .card:hover {
+            border-color: #555555;
+            transform: translateY(-2px);
+        }
+        .card h3 {
+            color: #ffffff;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+        .card p {
+            color: #aaaaaa;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .card a {
+            color: var(--accent);
+            text-decoration: none;
+            padding: 12px 16px;
+            background-color: #383838;
+            border: 1px solid #484848;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.92rem;
+            transition: all 0.2s ease;
+            display: block;
+        }
+        .card a:hover {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: #ffffff;
+        }
+        .description {
+            background-color: var(--panel-alt);
+            padding: 22px 26px;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 35px;
+            color: #cccccc;
+            font-size: 0.95rem;
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--accent);
+        }
+        .description h4 {
+            color: #ffffff;
+            margin: 0 0 10px 0;
+            font-size: 1.05rem;
+        }
+        .description p {
+            margin: 0 0 12px 0;
+        }
+        .description p:last-child {
+            margin-bottom: 0;
+        }
+        .meta-list {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+            color: #b0b0b0;
+        }
+        .meta-list li {
+            margin-bottom: 5px;
+        }
+        .btn {
+            background: var(--panel-alt);
+            color: var(--fg);
+            border: 1px solid var(--line);
+            border-radius: 5px;
+            padding: 8px 14px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            transition: all 0.2s ease;
+        }
+        .btn:hover {
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 10px;
+            color: #777777;
+            border-top: 1px solid var(--line);
+            font-size: 0.88rem;
+        }
+        footer a {
+            color: #888888;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
 <div class="topbar">
-    <a class="btn" href="https://github.com/feureau/1792-1809_-_Yogya_Residency_Letters" target="_blank">
-        <svg class="gh-icon" viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.46-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
-        View on GitHub
+    <a class="btn" href="https://github.com/feureau/1792-1809_-_Yogya_Residency_Letters" target="_blank" rel="noopener">
+        <svg height="16" viewBox="0 0 16 16" width="16" style="fill:currentColor;"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.46-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+        GitHub Repository
     </a>
 </div>
 
 <header>
     <h1>1792–1809: Yogyakarta Residency Letters</h1>
-    <h2>The Reign of Sultan Hamengkubuwana II</h2>
+    <h2>The Reign of Sultan Hamengkubuwana II • Peter Carey Archival Notes & Transcriptions</h2>
 </header>
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px;">
-    <div class="section" style="flex: 1; min-width: 260px;">
-        <h3>Full Transcriptions</h3>
-        <p style="color:#aaaaaa; font-size:14px;">Complete compilation of all 405 historical transcriptions loaded into a single continuous page.</p>
-        <a href="full_transcriptions.html" class="btn-link">Open Full Transcriptions →</a>
+<div class="cards-grid">
+    <div class="card">
+        <div>
+            <h3>Individual Transcriptions</h3>
+            <p>Interactive side-by-side viewer pairing each manuscript folio with its transcribed Dutch and Javanese text, deep pan/zoom image inspection, and quick folio jump.</p>
+        </div>
+        <a href="transcriptions.html">Launch Folio Viewer →</a>
     </div>
 
-    <div class="section" style="flex: 1; min-width: 260px;">
-        <h3>Individual Transcriptions</h3>
-        <p style="color:#aaaaaa; font-size:14px;">Browse all historical transcriptions side-by-side with manuscript scans.</p>
-        <a href="transcriptions.html" class="btn-link">Browse All Transcriptions →</a>
+    <div class="card">
+        <div>
+            <h3>Full Documentation</h3>
+            <p>Continuous sequential scroll of all 413 archival folios rendered in real time, with per-document multi-format export (.md, .html, .doc) and GitHub issue reporting.</p>
+        </div>
+        <a href="full.html">Open Full Transcriptions →</a>
     </div>
 
-    <div class="section" style="flex: 1; min-width: 260px;">
-        <h3>Keyword Dictionary</h3>
-        <p style="color:#aaaaaa; font-size:14px;">Reference table mapping historical terms, names, and places.</p>
-        <a href="dictionary.html" class="btn-link">Open Keyword Dictionary →</a>
+    <div class="card">
+        <div>
+            <h3>Keyword Dictionary</h3>
+            <p>Searchable historical lexicon of 488 entries categorizing Javanese nobility, VOC and colonial officials, geographic toponyms, legal concepts, and currency units.</p>
+        </div>
+        <a href="dictionary.html">Explore Keyword Dictionary →</a>
     </div>
 </div>
 
 <div class="description">
-    <strong>Archival Sources:</strong> ANRI, Leiden University Library, Nationaal Archief, KITLV.<br>
-    <strong>Project Scope:</strong> Historical transcriptions, archival summaries, and research dossiers compiled by Prof. Peter Carey covering the Vorstenlanden (Yogyakarta & Surakarta) from 1792 to 1809.
+    <h4>About the Collection & Historical Background</h4>
+    <p>
+        This digital edition compiles the archival transcripts and research notes produced by <strong>Prof. Peter Carey</strong> documenting the Vorstenlanden (the Principalities of Yogyakarta and Surakarta) during the second reign of Sultan Hamengkubuwana II (reigned 1792–1810, 1811–1812, 1826–1828).
+    </p>
+    <p>
+        The corpus captures critical correspondence between the Yogyakarta Court (Kraton) and successive Dutch East India Company (VOC) and Franco-Dutch colonial officials (Residents Matthijs Waterloo, F.J. Rothenbühler, J.G. van den Berg, Governor Nicolaus Engelhard, and Governor-General Herman Willem Daendels) leading up to the British intervention under Thomas Stamford Raffles.
+    </p>
+    <ul class="meta-list">
+        <li><strong>Primary Archival Repositories:</strong> Arsip Nasional Republik Indonesia (ANRI, Jakarta), Nationaal Archief (The Hague), Leiden University Library, KITLV Collections, and the British Library (Mackenzie & Raffles Collections).</li>
+        <li><strong>Scope:</strong> 413 digitized manuscript scans and synchronized markdown transcriptions.</li>
+        <li><strong>Transcription & Editorial Model:</strong> Diplomatic transcription preserving original orthography, archaic 18th/19th-century Dutch and Javanese phrasing, marginalia, and archival cross-references.</li>
+    </ul>
 </div>
 
-<footer style="text-align:center; padding:30px; color:#666666; border-top:1px solid #444; margin-top:30px;">
-    <a href="https://github.com/feureau/1792-1809_-_Yogya_Residency_Letters" style="color: #666; text-decoration: none;">GitHub Repository</a> | 1792-1809 Yogyakarta Residency Letters
+<footer>
+    <a href="https://github.com/feureau/1792-1809_-_Yogya_Residency_Letters">GitHub Repository</a> • 1792–1809 Yogyakarta Residency Letters Archive
 </footer>
 
 </body>

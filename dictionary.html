@@ -6,56 +6,2644 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Keyword Dictionary - 1792-1809 Yogyakarta Residency Letters</title>
+    <title>Keyword & Terminology Dictionary — 1792-1809 Yogyakarta Residency Letters</title>
     <style>
-        body { background-color: #1a1a1a; color: #e0e0e0; font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; line-height: 1.65; }
-        .topbar { display: flex; gap: 10px; border-bottom: 1px solid #333; padding-bottom: 15px; margin-bottom: 25px; flex-wrap: wrap;}
-        .btn { background: #2d2d2d; color: #e0e0e0; border: 1px solid #444; border-radius: 5px; padding: 8px 14px; text-decoration: none; display: flex; align-items: center; gap: 5px;}
-        .btn:hover { background: #4a9eff; color: #ffffff; }
-        .gh-icon { fill: currentColor; width: 16px; height: 16px; }
-        .topbar-right { margin-left: auto; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #444; padding: 10px; text-align: left; }
-        th { background-color: #2d2d2d; color: #ffffff; }
-        .dictionary-content blockquote { border-left: 4px solid #555; margin-left: 0; padding-left: 15px; color: #b0b0b0; }
-        .dictionary-content table { margin-bottom: 2rem; }
+        :root {
+            --bg: #1a1a1a;
+            --panel: #222222;
+            --panel-alt: #2d2d2d;
+            --fg: #e0e0e0;
+            --muted: #9a9a9a;
+            --line: #333333;
+            --accent: #4a9eff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .topbar {
+            display: flex;
+            gap: 10px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .btn {
+            background: var(--panel-alt);
+            color: var(--fg);
+            border: 1px solid var(--line);
+            border-radius: 5px;
+            padding: 8px 14px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        .btn:hover { background: var(--accent); color: #ffffff; }
+        h1 { color: #ffffff; margin-top: 0; }
+        .controls {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .search-box {
+            flex: 2;
+            min-width: 250px;
+            background: var(--panel);
+            color: var(--fg);
+            border: 1px solid #444;
+            border-radius: 5px;
+            padding: 10px 14px;
+            font-size: 0.95rem;
+        }
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .category-select {
+            flex: 1;
+            min-width: 200px;
+            background: var(--panel);
+            color: var(--fg);
+            border: 1px solid #444;
+            border-radius: 5px;
+            padding: 10px 14px;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+        .stats-bar {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--panel);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+        }
+        th, td {
+            border: 1px solid var(--line);
+            padding: 12px 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: var(--panel-alt);
+            color: #ffffff;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+        tr:hover {
+            background-color: rgba(74, 158, 255, 0.07);
+        }
+        .tag {
+            display: inline-block;
+            background: #2a3b4c;
+            color: #8bc34a;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 0.78rem;
+            white-space: nowrap;
+        }
+        .term-title {
+            color: #ffffff;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
+
     <div class="topbar">
-        <a class="btn" href="index.html">← Index</a>
-        <a class="btn" href="transcriptions.html">Transcriptions Viewer</a>
-        <a class="btn" href="full_transcriptions.html">Full Documentation</a>
-        <div class="topbar-right">
-             <a class="btn" href="https://github.com/feureau/1792-1809_-_Yogya_Residency_Letters" target="_blank">
-                <svg class="gh-icon" viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.46-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
-                View on GitHub
-            </a>
-        </div>
+        <a class="btn" href="index.html">← Main Portal</a>
+        <a class="btn" href="transcriptions.html">Individual Transcriptions</a>
+        <a class="btn" href="full.html">Full Documentation</a>
     </div>
 
     <h1>Keyword & Terminology Dictionary</h1>
-    <p>Reference mapping of historical terms, phonetic spellings, and standardized names extracted from <code>39_Expanded_Keyword_Index.md</code>.</p>
+    <p style="color: var(--muted); margin-bottom: 25px;">
+        Comprehensive historical glossary of rulers, princely houses, Javanese officials, colonial officers, geographical sites, administrative concepts, and currency units compiled from the Peter Carey Archive.
+    </p>
 
-    <div id="dictionary-content" class="dictionary-content">Loading…</div>
+    <div class="controls">
+        <input type="text" id="searchInput" class="search-box" placeholder="🔍 Search by term, name, title, place, or concept..." autofocus>
+        <select id="categorySelect" class="category-select">
+            <option value="">All Categories (488 entries)</option>
+            <option value="Chronology, Calendar Concepts, and Year Cycles">Chronology, Calendar Concepts, and Year Cycles</option>
+            <option value="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</option>
+            <option value="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</option>
+            <option value="Heirloom Weapons (Pusaka)">Heirloom Weapons (Pusaka)</option>
+            <option value="Javanese Officials, Commanders, and Local Leaders">Javanese Officials, Commanders, and Local Leaders</option>
+            <option value="Javanese Royalty and Princely Families">Javanese Royalty and Princely Families</option>
+            <option value="Literary, Historical, and Religious Texts">Literary, Historical, and Religious Texts</option>
+            <option value="Military Regiments, Units, Ships, and Forts">Military Regiments, Units, Ships, and Forts</option>
+            <option value="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</option>
+            <option value="Religious Leaders, Scholars, Mystics, &amp; Teachers">Religious Leaders, Scholars, Mystics, &amp; Teachers</option>
+            <option value="Retainers, Servants, and Followers in Exile">Retainers, Servants, and Followers in Exile</option>
+        </select>
+    </div>
 
-    <script src="js/marked.min.js?v=1.0.0"></script>
+    <div class="stats-bar" id="statsBar">
+        Showing all entries.
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 22%;">Category</th>
+                <th style="width: 28%;">Standard / Historical Term</th>
+                <th style="width: 50%;">Description / Context</th>
+            </tr>
+        </thead>
+        <tbody id="dictionaryBody">
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Dipanagara, Prince (Pangéran Dipanagara)</td>
+                <td>Central figure of the Java War (1825–1830) and primary subject of the book. Childhood names: Bendara Radèn Mas Mustahar, Radèn Antawirya. Religious/wandering names: Sèh Ngabdurahim, Ngabdulkamit. Assumed the title of the Javanese messianic *Ratu Adil* (&#x27;Just King&#x27;) and styled himself Sultan Ngabdulkamid Èrucakra Sayidin Panatagama Kalifat Rasulullah, Kabiril Mukminin, and Kalipah Rasulullah Jawa in his exile letters.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sultan Mangkubumi (Hamengkubuwana I)</td>
+                <td>First Sultan of Yogyakarta (reigned 1749–1792), founder of the sultanate, and great-grandfather of Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sultan Hamengkubuwana II (Sultan Sepuh / Gusti Radèn Mas Sundoro)</td>
+                <td>Second Sultan of Yogyakarta (reigned 1792–1810, 1811–1812, 1826–1828), grandfather of Dipanagara. Head of the *kasepuhan* faction. Deposed and exiled twice (Pulau Pinang/Ambon).</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sultan Hamengkubuwana III (Raja Putra Naréndra / Pangéran Adipati Anom / Kanjeng Rama)</td>
+                <td>Third Sultan of Yogyakarta (reigned 1812–1814), father of Dipanagara. Leader of the *karajan* faction, elevated to Sultan by the British.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sultan Hamengkubuwana IV (Sultan Séda Besiyar / Jarot)</td>
+                <td>Fourth Sultan of Yogyakarta (reigned 1814–1822), younger half-brother of Dipanagara. Died suddenly in 1822.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sultan Hamengkubuwana V</td>
+                <td>Child Sultan of Yogyakarta (reigned 1822–1826, 1828–1855), nephew of Dipanagara, placed under a regency/guardianship.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sultan Hamengkubuwana VI (Pangéran Mangkubumi)</td>
+                <td>Younger brother of HB V, reigned 1855–1877.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sultan Hamengkubuwana VII, VIII, IX</td>
+                <td>Later Sultans of Yogyakarta (HB IX made historical materials available).</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sunan Pakubuwana IV (Sunan Bagus)</td>
+                <td>Ruler of Surakarta (reigned 1788–1820) who secretly conspired with the Sepoys and Yogya against the British.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sunan Pakubuwana V</td>
+                <td>Son of PB IV, reigned 1820–1823.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sunan Pakubuwana VI (Radèn Mas Saperdan)</td>
+                <td>Reigned 1823–1830. Mercurial ruler who secretly sympathized with Dipanagara and was exiled to Ambon in 1830.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sunan Pakubuwana VII (Pangéran Purbaya)</td>
+                <td>Reigned 1830–1858.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Sunan Pakubuwana VIII</td>
+                <td>Reigned 1858–1861.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Natakusuma (Pakualam I)</td>
+                <td>Son of HB I, exiled by Daendels but installed as independent prince of the Pakualaman by Raffles (reigned 1812–1829).</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Radèn Tumenggung Natadiningrat (Pakualam II)</td>
+                <td>Son of Natakusuma, reigned 1829–1858.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Suryasasraningrat (Pakualam III)</td>
+                <td>Reigned 1858–1864.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Radèn Mas Said (Mangkunagara I / Sultan Adiprakasa Lala Jayamisésa)</td>
+                <td>Legendary 18th-century guerrilla fighter and founder of the Mangkunagaran line.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Prangwedana (Mangkunagara II)</td>
+                <td>Reigned 1796–1835. Created the Mangkunagaran Legion under Daendels and allied with the British/Dutch.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Mangkunagara III</td>
+                <td>Reigned 1835–1853.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Ratu Ageng Tegalreja (Ratu Kadipatèn / Mas Rara Juwati)</td>
+                <td>Great-grandmother of Dipanagara, widow of HB I. Devout Muslim who raised Dipanagara at Tegalreja.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Ratu Kedhaton (later Ratu Ageng)</td>
+                <td>Official wife of HB II, mother of HB III, and grandmother of Dipanagara. Stepmother/rival to HB III&#x27;s circle.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Ratu Kencana Wulan (later Ratu Wétan)</td>
+                <td>Powerful, wealthy, and politically dominant favorite consort of HB II.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Ratu Kencana (later Ratu Ibu / Ratu Ageng)</td>
+                <td>Mother of HB IV who allied with Danureja IV and Major Wiranagara against Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Radèn Ayu Mangkarawati</td>
+                <td>Secondary wife of HB III and mother of Dipanagara (recipient of 1830 letter).</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Mangkubumi</td>
+                <td>Son of HB I, uncle of Dipanagara, fellow guardian of HB V, and senior commander during the Java War before surrendering in 1829.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Ngabèhi (Jayakusuma I)</td>
+                <td>Son of HB II, uncle of Dipanagara, brave army commander killed with his sons in the Kelir Mountains in 1829.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Mangkudiningrat I</td>
+                <td>Ambitious son of HB II, leader of *kasepuhan* faction, exiled to Pulau Pinang and Ambon.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Mangkudiningrat II (Radèn Tumenggung Mangkuwijaya)</td>
+                <td>Son of Mangkudiningrat I, joined Dipanagara and later surrendered.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Mertasana</td>
+                <td>Son of HB II, exiled to Pulau Pinang, returned in 1825 and killed at Nglèngkong in 1826.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Dipasana</td>
+                <td>Son of HB I, led a brief mystical revolt in Kedhu in 1822, exiled to Ambon.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Dipasanta</td>
+                <td>Son of HB I.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Dipawiyana I (Panengah)</td>
+                <td>Son of HB II, trusted adviser to HB III and Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Dipawiyana II</td>
+                <td>Cousin and brother-in-law of Dipanagara who accompanied him into exile in Manado and Makassar.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Dipawijaya I, II, III (Muhamad Abubakar / Pangéran Wijil)</td>
+                <td>Sons of HB I and HB II.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Suryabrangta (Purwadiningrat)</td>
+                <td>Son of HB III, brother of Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Suryawijaya (Basah Ngabdulsamsu)</td>
+                <td>Younger brother of Dipanagara and Java War commander.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Adinagara (Suryèngalaga)</td>
+                <td>Younger brother of Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Adisurya</td>
+                <td>Mystic brother of Dipanagara who died on Mount Sirnabaya in 1829.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Purwakusuma, P. Bintara, P. Singasari, P. Wiramenggala (Prabu)</td>
+                <td>Sons of HB II who joined Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Prabuningrat</td>
+                <td>Uncle of Dipanagara, killed at Siluk in 1829.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Buminata (Surakarta)</td>
+                <td>Brother of PB IV, patron of religious scholars.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Mangkubumi (Surakarta)</td>
+                <td>Brother of PB IV, exiled to Ambon (1818–1824).</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Kusumayuda</td>
+                <td>Son of PB IV and Surakarta army commander in Bagelèn.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Aria Mataram (Sunan Panutup / Radèn Mas Tapa)</td>
+                <td>Son of Amangkurat I who used Guwa Suracala.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Adikusuma (son of HB I)</td>
+                <td>Robbed Natakusuma&#x27;s residence in 1810–1811.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Adikusuma (son of Jayakusuma/Ngabèhi)</td>
+                <td>Killed at Gunung Kelir in 1829.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Adinagara (bupati keparak)</td>
+                <td>Nephew of HB I, led expedition against Rongga in 1810.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Adiwijaya I &amp; II</td>
+                <td>Sons of HB I and HB II, killed in 1826.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Adiwinata I &amp; II</td>
+                <td>Sons of HB II, joined Dipanagara at Selarong.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Abubakar (Dipawiyana I)</td>
+                <td>Son of HB I, head of court priyayi pradikan, killed in 1826.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Danupaya</td>
+                <td>Son of HB I, killed in 1826.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Mulyakusuma</td>
+                <td>Son of Pangéran Ngabèhi, fought for Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Natabaya, Pamot, Purbawinata, Santakusuma, Santawijaya, Selarong, Tepasanta</td>
+                <td>Sons of HB II.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Radèn Ayu Bendara I &amp; II</td>
+                <td>Daughters of HB I and HB II.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Radèn Ayu Anom (Suratmi)</td>
+                <td>Daughter of HB II, wife of Pakualam II.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Suryaningprang (Radèn Mas Salya)</td>
+                <td>Son of Pakualam I.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Suryaputra (Radèn Mas Mahmud)</td>
+                <td>Son of Pakualam II.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Arya Rangga</td>
+                <td>Younger brother of Dipanagara exiled to Ternate in 1849.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Pangéran Suryanagara</td>
+                <td>Son of HB V by an unofficial wife.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Radèn Tumenggung Mangkudirja (Pangéran Natapraja / Radèn Mas Papak)</td>
+                <td>Son of Mangkudiningrat I and Radèn Ayu Sérang.</td>
+            </tr>
+            <tr data-cat="Javanese Royalty and Princely Families">
+                <td><span class="tag">Javanese Royalty and Princely Families</span></td>
+                <td class="term-title">Radèn Mas Jusuf Diponegoro &amp; Radèn Salèh Diponegoro</td>
+                <td>Direct descendants of Dipanagara in Makassar.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Kasimun (Wangsadikrama / Sadikrama)</td>
+                <td>Intimate retainer (*panakawan*) who accompanied Dipanagara in Manado and Makassar until his death.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Banthèngwarèng</td>
+                <td>Intimate dwarf retainer (*panakawan*) who accompanied Dipanagara into exile in Manado and Makassar.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Jayasurata (Rata)</td>
+                <td>Intimate retainer (*panakawan*) who accompanied Dipanagara in Manado and Makassar.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Rujakbeling (Sahiman)</td>
+                <td>Intimate retainer (*panakawan*) who accompanied Dipanagara in Manado and Makassar.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Teplak (Fikpak / Rujakgadhung)</td>
+                <td>Manservant (*panakawan*) who accompanied Dipanagara in Manado and Makassar.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Kyai Tirtadrana</td>
+                <td>Javanese scribe and former head demang of Grabag who served as Dipanagara&#x27;s amanuensis in Manado.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Angamerta &amp; Bok Angamerta</td>
+                <td>Intimate retainer and female servant in exile.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Rajamenggala &amp; Mina</td>
+                <td>Intimate retainer and wife in exile.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Wangsatruna &amp; Bok Wangsatruna</td>
+                <td>Intimate retainer and female servant in exile.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Mertaleksana &amp; Saritah</td>
+                <td>Intimate retainer and wife in exile.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Nurhamidin (Midin)</td>
+                <td>Manservant in exile.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Mangi</td>
+                <td>Manservant in exile in Makassar.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Suranatan (Suranata / Sataruna) &amp; Urin</td>
+                <td>Follower of Kyai Maja and wife in exile.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Amadullah (Bambang / Madula)</td>
+                <td>Female servant (mother of Jayasurata) in exile.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Trunadanti (Gunadanti)</td>
+                <td>Principal female servant in exile in Makassar.</td>
+            </tr>
+            <tr data-cat="Retainers, Servants, and Followers in Exile">
+                <td><span class="tag">Retainers, Servants, and Followers in Exile</span></td>
+                <td class="term-title">Martha, Truna, Suprana, Batu, Wira</td>
+                <td>Minahasan/Manadonese local servants in Dipanagara&#x27;s exile household.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Maja (Bagus Kalifah)</td>
+                <td>Dipanagara&#x27;s chief religious adviser during the Java War. Head of Maja pesantrèn in Pajang. Surrendered 1828, exiled to Tondano.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Rahmanudin</td>
+                <td>Former Yogya *pengulu* dismissed by Danureja IV. Close friend of Dipanagara who explained the concept of the *Wali Wudhar*.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Pekih Ibrahim (Kyai Muhamad Kusèn)</td>
+                <td>Pengulu of Dipanagara&#x27;s administration (1828–1830).</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Haji Imamraji</td>
+                <td>First pengulu of Dipanagara&#x27;s administration (1825–1828).</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Haji Badarudin</td>
+                <td>Head of Suranatan regiment and close adviser to Dipanagara. Later pengulu of Bagelèn.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Haji Ngisa</td>
+                <td>Religious adviser and dullah commander from Pulo Kadang who acted as jester at Menorèh.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Taptajani</td>
+                <td>Religious teacher from Melangi who moved to Surakarta; spiritual mentor to Dipanagara and Adisurya.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Kuwaron</td>
+                <td>Senior ulama from Kuwaron summoned by Dipanagara at Selarong.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Hasan Besari</td>
+                <td>Renowned head of Tegalsari pesantrèn in Panaraga.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Hasan Besari (Maja)</td>
+                <td>Elder brother of Kyai Maja.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Banjarsari (Tapsir Anom)</td>
+                <td>Head of Banjarsari pesantrèn in Madiun.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Murma Wijaya</td>
+                <td>Wealthy religious teacher at Kepundhung, banished to Ambon in 1817.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Iman Sampurna</td>
+                <td>Mystic from Lodhaya who prophesied a coming disaster and Ratu Adil in 1819.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Radèn Mas Umar Mahdi</td>
+                <td>Commoner who launched a failed millenarian *Ratu Adil* uprising in Bagelèn in 1817.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Sayyid Muhammad (Sayyid Kramat)</td>
+                <td>Arab millenarian leader in Madiun (1814).</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Sidul Aku</td>
+                <td>Religious teacher from Gresik involved in 1819 millenarian movement.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Sèh Abdul Ahmad bin Abdullah al-Ansari</td>
+                <td>Arab trader from Jeddah and religious adviser at Tegalreja.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Sèh Ahmad (Ansar Sharif)</td>
+                <td>Son-in-law of al-Ansari killed at Selarong in 1825.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Sayyid Hasan al-Habāshi</td>
+                <td>Arab scholar from Surat who tutored HB V.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Muhamad Sapingi</td>
+                <td>Pengulu of Yogya (1798–1812) who fled during British attack.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Abuyamin (Pengulu Kamalodiningrat)</td>
+                <td>Pro-Danureja IV pengulu of Yogya (1823–c. 1835).</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Sunan Kalijaga</td>
+                <td>One of the legendary *Wali Sanga* (Nine Apostles of Islam).</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Sèh Maulana Maghribī</td>
+                <td>Apostle of Islam buried at Mancingan.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Panembahan Sénapati</td>
+                <td>16th-century founder of Mataram.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Sultan Agung</td>
+                <td>Great 17th-century ruler of Mataram who prophesied 300 years of Dutch rule.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Sunan Amangkurat I, II, III, IV</td>
+                <td>Rulers of Mataram.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Ratu Kidul</td>
+                <td>Goddess of the Southern Ocean and spiritual consort of Mataram rulers.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Genawati / Nyai Lara Kidul / Radèn Déwi</td>
+                <td>Spirit guardians of the Southern Ocean.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Sapu Jagad</td>
+                <td>Protector spirit of Mount Merapi.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Gedhé Dhadhapan</td>
+                <td>Father-in-law of Dipanagara.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Haji Amattakar (Jayamenggala / Kyai Muhammadahir)</td>
+                <td>Confidante of HB II and gunpowder expert.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Haji Ibrahim</td>
+                <td>Court haji from Wanasari.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Haji Muhamad Idris</td>
+                <td>Head of Yogya haji under HB II.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Haji Abdulsalam</td>
+                <td>Messenger for HB II.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Haji Abdul Wahid &amp; Haji Abdulgani</td>
+                <td>Court santri.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Ajar Rawana (Imanreja)</td>
+                <td>Religious teacher in Sréngat.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Melangi (Iman Ali / Muhamad Salim / Muhamad Pekih)</td>
+                <td>Religious teacher and adviser at Melangi.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Guru Badhèran</td>
+                <td>Father of Kyai Maja.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Sèh &#x27;Abd al-Samad al-Palimbānī</td>
+                <td>18th-century Palembang Sufi scholar.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Wahhābī leaders</td>
+                <td>Muhammad ibn &#x27;Abd al-Wahhāb &amp; &#x27;Abd al-Aziz.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Ottoman Sultans</td>
+                <td>&#x27;Abd al-Hamid I, Selim III, Mahmud II.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kyai Taslim</td>
+                <td>Ironmaster/blacksmith (*ahli pethèk wesi pamor*) who evaluated *Wisa Bintulu* kris.</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kadanurejan</td>
+                <td>: Nur Samsi, Mustakak, Nur Iman</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kauman</td>
+                <td>: Ngusman, Suryadi, Rakiman, Ngabdullah, Iman</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Kraton</td>
+                <td>: Amad Ripangi, Amad Anom</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Mangkubumèn (Mangkuratan)</td>
+                <td>: Abjani, Abdul Samad, Amad Sangi, Nur Samsi, Amad Kalipah</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Pakualaman</td>
+                <td>: Muntaka, Amad Ripangi, Ngarpani, Nitireja, Resamenggala</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Prabuningratan</td>
+                <td>: Amad Anom</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Suranatan</td>
+                <td>: Waladaka, Mulyani, Amad Ngali, Sarawidi, Amad Ngijan, Amad Masam</td>
+            </tr>
+            <tr data-cat="Religious Leaders, Scholars, Mystics, &amp; Teachers">
+                <td><span class="tag">Religious Leaders, Scholars, Mystics, &amp; Teachers</span></td>
+                <td class="term-title">Pathok Negari Teachers</td>
+                <td>: Kyai Melangi, Kyai Sakaputa (Pekalongan), Haji Abdullatip (Plothingan), Kyai Mukiba (Wanakrama)</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Rongga Prawiradirja III</td>
+                <td>Charismatic *bupati wedana* of Madiun who died in rebellion (1810), regarded as the &quot;last champion&quot; of the old order.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Ratu Maduretna</td>
+                <td>Official wife of Radèn Rongga III and daughter of HB II.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Ali Basah Abdul Mustapa Prawiradirja (Senthot)</td>
+                <td>Son of Radèn Rongga III, brilliant but spendthrift 17-year-old cavalry commander for Dipanagara. Surrendered in October 1829.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Adipati Abdullah Danureja</td>
+                <td>Dipanagara&#x27;s wartime *patih* (chief minister).</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Ali Basah Kerta Pengalasan</td>
+                <td>Opium-addicted, battle-scarred commander for Dipanagara who brokered the initial peace talks with Cleerens.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Ayu Sérang (Nyai Ageng Sérang)</td>
+                <td>Female warrior, ascetic, and descendant of Sunan Kalijaga who commanded troops in Demak/Sérang.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Ayu Yudakusuma</td>
+                <td>Daughter of HB I and fierce female cavalry commander in the eastern *mancanagara*.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Tumenggung Sumadiningrat</td>
+                <td>Powerful Yogya military commander and ally of HB II, killed during the British assault in 1812.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Adipati Danureja I</td>
+                <td>First *patih* of Yogyakarta (1755–1799).</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Adipati Danureja II</td>
+                <td>*Patih* of Yogya (1799–1811), strangled on orders of HB II.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Kyai Adipati Danureja III (Sindunagara I)</td>
+                <td>Acting *patih* of Yogya (1811–1813).</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Adipati Danureja IV (Sumadipura)</td>
+                <td>Corrupt, pro-Dutch *patih* of Yogya (1813–1847) and bitter enemy of Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Adipati Danureja V (Gandakusuma / Ali Basah Abdul Mahmud / Lurah Sukapja)</td>
+                <td>Son of Danureja II, wartime commander for Dipanagara, later *patih* of Yogya (1847–1879) (addressed in 1830 letter).</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Iman Muhamad Ngabdulkamil Ali Basah (Radèn Tumenggung Natadirja / Gusti Basah / Ali Basah Mertanagara / Lurah Jayapermadi)</td>
+                <td>Son of Danureja II, brother of Senthot, married Dipanagara&#x27;s daughter, died of wounds in 1828 (addressed in 1830 letter).</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Major Tumenggung Wiranagara (Pangéran Adipati Prabuningrat / Radèn Tumenggung Wiraguna II)</td>
+                <td>Commander of the Sultan&#x27;s bodyguard, lover of Ratu Ibu, hated by Dipanagara, exiled to Banda in 1832.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Mas Tumenggung Sumanegara</td>
+                <td>Bupati of Padhangan and Rongga&#x27;s loyal deputy, killed in 1810.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Tumenggung Natawijaya III &amp; IV</td>
+                <td>Bupatis of Panolan.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Tumenggung Purwadipura</td>
+                <td>Yogya official, led the failed expedition against Rongga in 1810.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Mas Ngabèhi Gandadiwirya</td>
+                <td>Retainer of Mangkudiningrat who assassinated Jayasentika in 1812.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Ngabèhi Jayasentika</td>
+                <td>Pro-British *patih* of the *kadipatèn*, assassinated in 1812.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Tan Jin Sing (Kapitan Cina / Radèn Tumenggung Secadiningrat / Radèn Tumenggung Purwa)</td>
+                <td>Chinese captain of Yogya made a Javanese *bupati* by HB III.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Chinese Captains of Yogya</td>
+                <td>To In (1755–1764), Gan Ke Ko (1764–1776), Tan Lek Ko (1776–1793), Qué Jin Sing (1793–1803), Tan Jin Sing (1803–1813), Qué Wi Kong (1813–1828), Qué Pun Sing (1828–?).</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Bupati Wedana of Madiun (Appendix 5b)</td>
+                <td>Pangéran Mangkudipura (1755–1760), Radèn Rongga Prawiradirja I (1760–1784), Radèn Rongga Prawiradirja II (1784–1790, 1794–1796), Radèn Tumenggung Sasradiningrat I (1790–1794), Radèn Rongga Prawiradirja III (1796–1810), Pangéran Dipakusuma (joint 1811–1822), Radèn Rongga Prawirasentika (joint 1811–1826), Pangéran Rongga Prawiradiningrat (1822–1859).</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Patih of the Kadipatèn (Appendix 5b)</td>
+                <td>Mas Tumenggung Wiraguna I (c. 1780–1807), Mas Tumenggung Kertadirja I (1807–pre-1810), Mas Tumenggung Sumadirja (1807–pre-1810), Kyai Tumenggung Cakradipura (1810–pre-1812), Radèn Ngabèhi Jayasentika (1810–1812).</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Tumenggung Aria Sasradilaga</td>
+                <td>Brother-in-law of Dipanagara, led the 1827–1828 Jipang-Rajegwesi rebellion.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Tumenggung Pringgadiningrat (Pringgakusuma)</td>
+                <td>*Patih jero* of Yogya (1812–1815).</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Tumenggung Danukusuma I</td>
+                <td>Strangled at Banyusumurup in 1812.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Tumenggung Danukusuma II (Mertawijaya)</td>
+                <td>Brother-in-law of Dipanagara, *nayaka* and later *patih* of Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Mas Tumenggung Kertadirja II</td>
+                <td>Bupati of Kerja, friend of Dipanagara, exiled to Ambon in 1831.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Tumenggung Danuningrat I (Sayyid Alwi / Kyai Ngabèhi Danukrama)</td>
+                <td>First British-appointed bupati of Kedhu, killed in 1825.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Tumenggung Jagakarya</td>
+                <td>Pensioned bupati of Pacitan and devout Muslim.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Demang Jayamenggala</td>
+                <td>Tax-collector of Samèn and underworld bandit leader supporting Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Wirapati</td>
+                <td>Robber chieftain in northeastern Kedhu.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Jowanto</td>
+                <td>Demang dhongkol who raided Mrs. Baumgarten&#x27;s home in 1819.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Mas Sinduratmaja / Embok Kajèn (Radèn Ayu Guru)</td>
+                <td>Leaders of the 1822 Kedhu revolt.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Kaap (Radèn Singgunkara)</td>
+                <td>Cape-educated noble who spread rumors in Surakarta.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Panji Suradiningrat</td>
+                <td>Surakarta official who led an 1813 uprising in Kedhiri.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Hasan Mahmud (Radèn Sukur)</td>
+                <td>Son of bupati of Semarang who joined Dipanagara.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Salèh (Bustaman)</td>
+                <td>World-renowned painter, nephew of bupati of Semarang.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Adipati Jayaningrat, Mangkupraja II, Danuningrat, Sasradiningrat II</td>
+                <td>*Patih* of Surakarta.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Pangéran Mangkudipura, Radèn Rongga I, II, III, Prawirasentika, Prawiradiningrat</td>
+                <td>*Bupati wedana* of Madiun.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Bratasena (Radèn Prawirabrata)</td>
+                <td>Deserter/bandit protected by Rongga and appointed *lurah mantri*.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Dasamuka &amp; Dirgananda</td>
+                <td>Aliases given to Rongga&#x27;s military commanders during his rebellion.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Radèn Tirtawijaya</td>
+                <td>Demang of Tersana, executed by Daendels via firing squad.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Sumadiwirya</td>
+                <td>Yogya official who wounded Radèn Rongga at Sekaran in 1810.</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Alap-alap</td>
+                <td>Bp Sokawati</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">P. Cakradiningrat</td>
+                <td>lurah Nyutra) &amp; *P. Cakrakusuma* (penilih</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Cakradipura, R.T. Cakraprawira, R.T. Sasradipura, Kyai Purwadiningrat</td>
+                <td>Bp Magetan</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Cakramenggala, R.T. Danuatmaja</td>
+                <td>Bp Rèma</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Danunegara, R.T. Dipadirja, R.T. Jayadirja, R.T. Jayawinata, R.T. Mertalaya, R.T. Purbakusuma, R.T. Purwadirana, R.T. Sumadigdaya, R.T. Sumadirja, R.T. Wiryadiningrat, R.Ng. Tirtadiwirya, R.Ng. Wanggèngsari</td>
+                <td>Bp Yogya</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R. Ria Danupaya, R. Ria Jayaprana, R. Ria Sumaatmaja</td>
+                <td>prajurit Sanaputra</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Aria Demang</td>
+                <td>prajurit Sanaputra</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Dipawiyana II</td>
+                <td>Bp Yogya</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Kyai Ng. Jaganegara</td>
+                <td>Wdn Gladhag</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Jayadiningrat</td>
+                <td>mantri prajurit</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Jayadipura &amp; R.T. Kertanegara &amp; Kyai T. Mangundipura &amp; R.T. Natayuda II</td>
+                <td>Bp Kedhu</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R. Aria Jayajana, R.T. Jayapanular, R.T. Jayawirya</td>
+                <td>Javanese Officials, Commanders, and Local Leaders</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Jayanegara &amp; R.T. Sasradiningrat II</td>
+                <td>Bp Rajegwesi</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Jayèngrana, R.T. Sasradiwirya, Kyai Ng. Prawirasastra, R.T. Wangsakusuma</td>
+                <td>Wdn prajurit</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Jayapuspita, R.T. Padmakusuma, Mas Padmawijaya</td>
+                <td>panji prajurit</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Kyai Juru</td>
+                <td>road overseer</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Mas T. Kandhuruwan, R.T. Pringgadiwirya, R.T. Mangundiwirya, R.T. Sawunggaling, R.T. Wiryakusuma</td>
+                <td>Bp Bagelèn / Lowanu</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Mas T. Kertadirja II</td>
+                <td>Bp Kerja, Sokawati</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Kertawijaya</td>
+                <td>Bp Ledhok / Gowong</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Malangnegara</td>
+                <td>Bp Magetan</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Mangkudirja</td>
+                <td>P. Natapraja</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Mangundirja &amp; R.T. Ranadirja</td>
+                <td>Bp Purwadadi</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Kyai Ng. / R.Ng. Mangundirana &amp; Ng. Sasrabau</td>
+                <td>Bp Kalangbrèt</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Natadiwirya</td>
+                <td>Bp Dhuri</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Nataprawira</td>
+                <td>Senthot Ali Basah</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Natawijaya III &amp; IV</td>
+                <td>Bp Panolan</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Nitinegara &amp; Kyai Ng. Nitipraja</td>
+                <td>jaksa</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Prawiradigdaya</td>
+                <td>Bp Gagatan</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">P. Prawiradiningrat</td>
+                <td>Bp Wdn Madiun</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Prawiranata</td>
+                <td>lurah panji</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Prawirasentika</td>
+                <td>Bp Bauwerna</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Prawirayuda</td>
+                <td>Bp Sekaran</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Pringgaatmaja &amp; R.T. Pringgakusuma</td>
+                <td>Bp Rawa</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Pringgalaya</td>
+                <td>Bp Kertasana</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.Ng. Purwawijaya</td>
+                <td>Bp Yogya</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Puspadipura</td>
+                <td>Bp Banget</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Ng. / R.T. Ranadipura</td>
+                <td>Javanese Officials, Commanders, and Local Leaders</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Sasrabau</td>
+                <td>Bp Kalangbrèt</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Sasradiningrat II</td>
+                <td>Bp Rajegwesi</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Sasrakusuma</td>
+                <td>Bp Purwadadi</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Sasranegara I, II, III</td>
+                <td>Bp Grobogan / Godéan / Goranggarèng</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Sasraprawira &amp; R.T. Sasrawinata</td>
+                <td>Bp Goranggarèng / Magetan</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Sasrawirana</td>
+                <td>Bp Sokawati</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Sawunggaling</td>
+                <td>Bp Bagelèn</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Secadiningrat</td>
+                <td>Tan Jin Sing, kapitan Cina</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Mas T. Setrawijaya</td>
+                <td>Bp Pacitan</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Mas T. Sumadipura</td>
+                <td>Bp Japan</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Mas T. Sumanegara</td>
+                <td>Bp Padhangan</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Suradirja</td>
+                <td>Bp Kenitèn</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Suranegara</td>
+                <td>Bp Godéan</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R. Suryaatmaja</td>
+                <td>mantri Yogya</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">Panji Suryèngrana &amp; R. Panji Yudaasmara</td>
+                <td>Javanese Officials, Commanders, and Local Leaders</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Wijayèngsastra</td>
+                <td>Bp Mataram and Pajang</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Wiryanegara</td>
+                <td>Bp Kertasana</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Wiryawinata</td>
+                <td>Bp Gunung Kidul</td>
+            </tr>
+            <tr data-cat="Javanese Officials, Commanders, and Local Leaders">
+                <td><span class="tag">Javanese Officials, Commanders, and Local Leaders</span></td>
+                <td class="term-title">R.T. Yudaprawira</td>
+                <td>Bp Maospati</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Java</td>
+                <td>Primary setting, specifically south-central Java.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Yogyakarta (Yogya / Djocja / Pasar Yogya)</td>
+                <td>Capital of the Sultanate &amp; central market tax farm.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Surakarta (Solo / Sala)</td>
+                <td>Capital of the Sunanate.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Batavia (Jakarta)</td>
+                <td>Center of Dutch colonial administration and site of Dipanagara&#x27;s 1830 stay in the Stadhuis.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Semarang</td>
+                <td>Main northern coastal port and administrative seat for Java&#x27;s Northeast Coast.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Surabaya</td>
+                <td>Main naval port, commercial hub, and location of the Tawangsari copper mint.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Tegalreja</td>
+                <td>Country estate west of Yogya where Dipanagara was raised, destroyed on 20 July 1825.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Sélareja</td>
+                <td>Dipanagara&#x27;s personal meditation retreat at Tegalreja (Pulo Waringin).</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Selarong</td>
+                <td>Dipanagara&#x27;s retreat and first military headquarters in Bantul, featuring the cave of Secang.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Guwa Secang</td>
+                <td>Cave at Selarong where Dipanagara received his vision of the 8 *Wali Wudhar*.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Madiun</td>
+                <td>Capital of the eastern *mancanagara*, domain of Radèn Rongga III, and major tollgate farm.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Maospati</td>
+                <td>Radèn Rongga&#x27;s fortified *dalem* (residence) west of Madiun.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Taman (Madiun)</td>
+                <td>Burial place of Radèn Rongga Prawiradirja I.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Giripurna (Gunung Bancak)</td>
+                <td>Burial place of Radèn Rongga III&#x27;s wife Ratu Maduretna.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Bayem (Madiun)</td>
+                <td>Burial place of Kyai Tumenggung Resagota.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Kalibeber</td>
+                <td>District in Kedhu/Wonosobo; domain of R.Ng. Danuwijaya.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Kawisarja</td>
+                <td>Village in Kulon Praga where Radèn Ayu Maduretna (Ratu Kedhaton) died in February 1828.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Kutha Pethik / Ketangga</td>
+                <td>Area near Ngawi prophesied in Jayabaya texts as the site of the *Ratu Adil*&#x27;s kingdom.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Sekaran</td>
+                <td>Village on the Sala River where Radèn Rongga and Sumanegara were killed in December 1810.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Banyusumurup</td>
+                <td>The &quot;traitors&#x27; graveyard&quot; southeast of Imagiri where Rongga, Danukusuma I, and others were buried; also a minor tollgate farm.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Magelang (Pasar Magelang)</td>
+                <td>Capital of Kedhu Residency and site of Dipanagara&#x27;s betrayal and arrest by De Kock on 28 March 1830; also market site.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Manado</td>
+                <td>Site of Dipanagara&#x27;s initial exile (1830–1833), housed in Fort New Amsterdam.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Makasar (Makassar / Fort Rotterdam / Kampung Melayu)</td>
+                <td>Site of Dipanagara&#x27;s final exile, family grave, and death (1833–1855).</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Tondano / Tonsea Lama (Kampung Jawa Tondano)</td>
+                <td>Site in Minahasa where Kyai Maja and his followers were exiled (established across the Tondano River after 1831).</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Bagelèn</td>
+                <td>The western *nagara agung*, includes weaving districts like Tanggung and Rèma, and major tollgate farms.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Rèma (Rèmakamal)</td>
+                <td>Mountainous district between Bagelèn and Banyumas where Dipanagara hid and negotiated with Cleerens at Rèmakamal and Kecawang; also a tollgate farm.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Kecawang</td>
+                <td>Village in northern Bagelèn where Cleerens negotiated with Dipanagara in February 1830.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Royal Military Academy at Breda</td>
+                <td>Archive location in Holland where Dipanagara&#x27;s 1830 Batavia letters were preserved.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Banyumas</td>
+                <td>The western *mancanagara*.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Gamping</td>
+                <td>Limestone quarries, site of HB I&#x27;s pre-Yogya *pesanggrahan*, and major tollgate farm west of Yogya.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Taman Sari (Water Palace)</td>
+                <td>Royal pleasure garden and gun foundry in Yogya (Pulo Kenonga &amp; Pulo Gedhong).</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Meester Cornelis (Jatinegara)</td>
+                <td>Daendels&#x27; heavily fortified strongpoint near Batavia, captured by the British in August 1811.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Klathèn</td>
+                <td>Midway town between Yogya and Surakarta where inter-court treaties were signed.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Pacitan (Pasar Pacitan)</td>
+                <td>Remote south coast district targeted for pepper, annexed by the British in 1812; also market tax farm.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Grindulu River</td>
+                <td>River valley in Pacitan.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Sendhang Pitu</td>
+                <td>Region between Slèman and Kali Praga.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Imagiri</td>
+                <td>Sacred royal graveyard of the Mataram dynasty.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Bengkung</td>
+                <td>Pond and retreat site at the top of the Imagiri stairway.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Song Kamal</td>
+                <td>Cave in Jejeran district where Dipanagara received his first vision in c. 1805.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Guwa Séluman</td>
+                <td>Cave near the Oyo River, home to the spirit Genawati; also a royal retreat built by HB II.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Guwa Suracala (Guwa Sigala-gala)</td>
+                <td>Cave on the Kali Opak in Gunung Kidul.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Guwa Langsé</td>
+                <td>Sheer coastal cave where Dipanagara meditated and met Ratu Kidul.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Parangkusuma / Parangtritis / Parangwédang / Mancingan</td>
+                <td>Sacred sites on the southern coast dedicated to Ratu Kidul.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Sragèn</td>
+                <td>Ancestral home of Ratu Ageng in Pajang.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Majasta</td>
+                <td>Pradikan village near Tembayat, birthplace of Dipanagara&#x27;s mother.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Tembayat</td>
+                <td>Famous religious center in the Pajang area.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Melangi</td>
+                <td>Pathok negari (center for Islamic law experts) near Yogya.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Dhadhapan</td>
+                <td>Village near Tempèl, home of Dipanagara&#x27;s first wife.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Panolan &amp; Jipang</td>
+                <td>Eastern *mancanagara* districts crucial for their teak forests, annexed in 1812.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Padhangan</td>
+                <td>Eastern *mancanagara* district administered by Sumanegara.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Bunder</td>
+                <td>Chinese customs post on the Brantas River.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Weleri</td>
+                <td>Spot on the post road where Radèn Tirtawijaya was executed.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Kali Tuntang</td>
+                <td>River and site of Janssens&#x27; capitulation to the British on 18 September 1811.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Nusa Kambangan &amp; Cilacap</td>
+                <td>Deepwater anchorages on the south coast.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Sumbawa (Bima)</td>
+                <td>Islamic principality linked to Ratu Ageng&#x27;s maternal ancestry.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Lipura</td>
+                <td>Site containing *Séla Gilang*, a holy black stone associated with Panembahan Sénapati.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Durrumtollah Academy</td>
+                <td>School in Calcutta where sons of Sura-adimanggala IV studied.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Panolan, Padhangan, Rajegwesi, Sekaran, Dhuri, Bauwerna</td>
+                <td>Component districts of Jipang annexed by the British in 1812.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Candhi Sèwu, Prambanan, Kalasan</td>
+                <td>Ancient Hindu/Buddhist temple complexes east of Yogya.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Bedhaya</td>
+                <td>Nahuys&#x27; country estate on the flanks of Mt. Merapi.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Rajawinangun / Arjawinangun</td>
+                <td>Royal estate leased to Dr. Harvey Thomson for indigo production.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Mount Rasamuni / Mount Lawu / Mount Merapi / Mount Sumbing / Mount Sundoro</td>
+                <td>Volcanic peaks associated with spiritual visions and eruptions (December 1822).</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Jabarangkah &amp; Karangkobar</td>
+                <td>Districts annexed by the Dutch on 1 January 1825.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Gombong (Fort Cochius)</td>
+                <td>Fortress town built in western Bagelèn.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Kemit (Gombong)</td>
+                <td>Bènthèng where Cleerens was based during peace negotiations.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Likupang</td>
+                <td>Trading post in the Bangka Strait (Minahasa).</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Ambon, Ternate, Banda, Pulau Pinang</td>
+                <td>External island locations used for exile.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Cirebon, Banten, Pekalongan, Japara, Rembang, Demak, Kendhal, Tuban, Lasem, Gresik</td>
+                <td>North coast (*pasisir*) towns and ports.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Pulo Kenonga &amp; Pulo Gedhong</td>
+                <td>Taman Sari), *Krapyak, Demak Ijo, Kyarasan, Képèk* (built by HB I</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Rajakusuma, Rajawinangun (Arjawinangun), Purwareja, Pelemsèwu</td>
+                <td>built by HB II as Crown Prince</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Wanacatur, Redi Sendhansari, Redi Cemara, Guwa Séluman, Alas Jeruk Legi, Alas Prapti, Gunung Kidul, Gunung Prau, Sukarini, Kudur Brubuh Kadisona, Tanjungtirta, Banyaksak, Drakila (Indrakila), Pengawatreja (Ngawatreja), Samas, Madyaketapang, Toyatumumpang (Banyutumumpang), Prèh Binatur, Telaga / Gunung Telaga (Gamping), Ambarketawang, Sanapakis, Tegilyasa, Tegilpengawé, Sanasèwu</td>
+                <td>built by HB II as Sultan</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Wanayasa, Plasa Kuning, Telaga Muncar, Tegal Gumenggeng, Ngandong Santun</td>
+                <td>built by HB III</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Bangsal Panggung</td>
+                <td>built in Yogya kraton by HB IV</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Amberkatawang (Gamping), Blunyah, Balong (Guyangan), Dhongkèlan, Gadhing, Grojogan, Gunung Gemak, Gunung Kelir, Jalasutra, Jati, Jejeran, Jumeneng, Kasongan, Kricakan, Lempuyangan, Mancingan, Melangi, Palérèd Kauman, Palérèd, Palérèd ing Trayeman, Papringan, Parangtritis, Parangwédang, Pakuncèn, Pencar(sari), Pengawatreja (Ngawatreja), Pijènan, Plasajené (Plasakuning), Pucang Anom, Purwareja, Rejadani, Rejakusuma, Rejawinangun, Samas, Sèwon, Tangkilan, Tanjungtirta, Gunung Telaga (Gamping), Turi, Wanacatur, Wanakrama, Wanasari, Wanayasa, Wotgalèh, Giring, Panithikan (Nithikan), Bacinan, Duwungas, Kebon (Kebanaran), Plotingan, Warak, Pekalongan (Tegalarum)</td>
+                <td>.</td>
+            </tr>
+            <tr data-cat="Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)">
+                <td><span class="tag">Places (Geographical Locations, Key Sites, Tollgates, Pathok Negari, &amp; Country Estates)</span></td>
+                <td class="term-title">Mlathèn, Bantul, Gamping, Kadilangu, Brosot, Kalasan, Wates, Jenu, Kemlaka, Mataram, Sorolan, Warak, Bligo, Kretek, Randhugunting (Randhugoang), Borongan, Serenan, Jatinom, Boyolali, Penthongan, Masaran, Pinggir, Pingit, Wanarata, Wongsajiwan, Banaran, Sokawati, Bagelèn, Pajang, Rèma, Gunung Tawang, Menorèh, Medhono, Cepaga, Jana, Kali Abu, Banyusumurup, Kali Nangka, Pakiswiring, Kaloran, Kedhu, Kertasana, Rawa, Kalangbrèt, Sibebek, Magetan, Jawar, Pasar Payaman, Pasar Magelang, Pasar Yogya, Pasar Pacitan</td>
+                <td>.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">abdi-Dalem</td>
+                <td>Royal official or retainer living within or near the kraton walls.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">adat</td>
+                <td>Custom, time-honored practice in social etiquette and legal matters.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">adipati</td>
+                <td>Title used with *pangéran* indicating a senior prince with an extensive apanage.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">ali basah</td>
+                <td>Title (&#x27;High Pasha&#x27;, from Turkish *Ali Pasha*) given by Dipanagara to select army commanders.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">alun-alun</td>
+                <td>The great open square in front of and behind the kraton, planted with boxed waringin trees.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">Apanage (Lungguh / gadhuhan)</td>
+                <td>Royal land grant given to princes and officials in lieu of salary.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">babad</td>
+                <td>Javanese historical chronicle written in verse cantos.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">bandar</td>
+                <td>Keeper of a tollgate or customs post (usually Chinese tax-farmers).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">batik</td>
+                <td>Intricately designed wax-dyed fabric.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">batur</td>
+                <td>Porter or coolie carrying shoulder loads (*pikul*).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">bekel</td>
+                <td>Local village tax collector operating on behalf of apanage holders.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">bènthèng stelsel</td>
+                <td>System of temporary battlefield fortifications used by De Kock to defeat Dipanagara.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">blandhong</td>
+                <td>Workers in the royal teak forests.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">bupati / kabupatèn</td>
+                <td>High administrative official / district residence and office of a bupati.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">cacah</td>
+                <td>Peasant household unit used for measuring land productivity and population (approx. 5 people).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">dalem</td>
+                <td>Princely residence or home of a high court official featuring a *pendhapa*.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">demang</td>
+                <td>Middle-ranking provincial tax and police official (*mantri-désa*).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">désa</td>
+                <td>Village complex with attached ricefields and orchards.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">dhalang</td>
+                <td>Puppeteer in the wayang shadow theatre.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">emban</td>
+                <td>Guardian or nurse of a young child or youth below sixteen.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">Èrucakra</td>
+                <td>Title of the Javanese messianic &#x27;Just King&#x27; (*Ratu Adil*).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">gamelan</td>
+                <td>Traditional Javanese percussion and wind orchestra.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">Garebeg (Mulud / Puwasa / Besar)</td>
+                <td>Thrice-annual Javanese-Islamic court festivals celebrating the Prophet&#x27;s Birthday, the end of Ramadhan, and the pilgrimage to Mecca.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">gunung</td>
+                <td>Mountain or large hill; also title for village police and tax officials.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">guwa</td>
+                <td>Cave or grotto (e.g., Guwa Secang, Guwa Séluman, Guwa Langsé).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">haji / haj</td>
+                <td>Title of a returned pilgrim from Mecca / the pilgrimage to Mecca.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">jago</td>
+                <td>Bandit chieftain, thug, or underworld enforcer (&#x27;fighting cock&#x27;).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">jaman édan / kaliyuga</td>
+                <td>&quot;Time of madness&quot; / final age of disorder preceding the *Ratu Adil*.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">jimat</td>
+                <td>Amulet, talisman, or heirloom believed to ward off sickness and provide invulnerability.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">jung</td>
+                <td>Javanese unit of land measurement (approx. 4 *bau* or 2.8 hectares).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">jurukunci / jurukuncèn</td>
+                <td>Doorkeeper or guardian of the keys of a royal grave or holy site / grave guardians&#x27; land.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kadipatèn</td>
+                <td>Official residence of the Crown Prince (*Pangéran Adipati Anom*).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kali</td>
+                <td>Large river (e.g., Kali Praga, Kali Opak, Bengawan Sala).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kampung</td>
+                <td>Village or urban settlement quarter (e.g., Kampung Cina, Kampung Melayu).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kapir laknatullah / kapir murtad</td>
+                <td>&quot;Heretics accursed by Allah&quot; (Europeans) / &quot;Apostates&quot; (Javanese allied with Dutch).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kapitan Cina</td>
+                <td>Head of the Chinese community in a town or provincial area.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kasepuhan / karajan</td>
+                <td>The &#x27;old&#x27; court faction (HB II) vs. the &#x27;young&#x27; Crown Prince faction (HB III).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kauman</td>
+                <td>Strict religious community in court cities living near the Great Mosque (*Mesjid Ageng*).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kebathinan</td>
+                <td>Javanese spiritual and mystical disciplines (science of the inner self).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kècu / wong durjana / kraman</td>
+                <td>Robber, highwayman, bandit / &#x27;evil folk&#x27; / rebel.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kelangenan-Dalem / pesanggrahan</td>
+                <td>Royal pleasure gardens, hunting lodges, and country estates.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kepatihan</td>
+                <td>Office and residence of the chief minister (*patih*).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">krama / ngoko</td>
+                <td>High Javanese (formal) vs. Low Javanese (informal).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kraton</td>
+                <td>Fortified royal palace, court, and residence of a ruler.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kris</td>
+                <td>Javanese stabbing dagger with meteoritic iron damascening (*pamor*).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">kyai</td>
+                <td>Honorific title for revered older men, country gentlemen, Islamic scholars, or heirloom weapons.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">labuhan</td>
+                <td>Ceremonial offering thrown into the sea to Ratu Kidul.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">lakon</td>
+                <td>Plot or story enacted in a wayang performance.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">lelana / tirakat / tapa</td>
+                <td>Spiritual wanderings, ascetic withdrawal, and meditation.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">lurah</td>
+                <td>Chief or head of a village or administrative branch.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">mancanagara</td>
+                <td>Outer provinces of the kingdom (eastern and western).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">mantri</td>
+                <td>Lower-ranking official in the royal administration.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">mas / radèn mas / radèn</td>
+                <td>Titles of Javanese nobility.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">mesjid</td>
+                <td>Mosque or place of worship (*Mesjid Ageng* = Great Mosque).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">nagara agung</td>
+                <td>Core royal territories surrounding the capital.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">nayaka</td>
+                <td>Senior court adviser / member of the eight-man council of state.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">ngindhung / numpang</td>
+                <td>Village dependants with house yards vs. landless lodgers/day laborers.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pajeg</td>
+                <td>Land-rent or tribute paid to apanage holders.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pamutihan / wong putihan</td>
+                <td>Tax-free religious settlements / &quot;people dressed in white&quot; (pious Muslims).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">panakawan</td>
+                <td>Intimate retainers/advisers of a ruler (e.g., Banthèngwarèng, Sahiman, Rata, Kasimun, Teplak, Rujakbeling).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pancas</td>
+                <td>Fiscal revision reducing the size of the *jung* while maintaining tax levels.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pangrembé</td>
+                <td>Special domain lands assigned directly to the ruler for revenue.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">panembahan / pangéran / panji</td>
+                <td>High princely title / prince / young nobleman or military commander.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pandhita-ratu</td>
+                <td>Priest-king exercising both spiritual and temporal power.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pasisir</td>
+                <td>Coastal regions, particularly the north coast of Java.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pathok negari</td>
+                <td>Centers for Islamic law experts (*ulama*) acting as advisers to the *pengulu* (Dhongkèlan, Melangi, Papringan, Plasajené, Purwareja, Kasongan).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">patih / patih jaba / patih jero / patih séda kedhaton</td>
+                <td>Chief minister / prime minister for external affairs / internal court administrator / &quot;patih who died in the kraton&quot; (Danureja II).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">payung</td>
+                <td>State umbrella used as insignia of rank.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pégon</td>
+                <td>Javanese written in unvocalised Arabic script.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pendhapa</td>
+                <td>Large covered audience hall in front of a Javanese house.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pengulu</td>
+                <td>Head of the religious hierarchy in court towns and judge in the *surambi* court.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pesanggrahan</td>
+                <td>Royal pavilion, overnight stopping place, or hunting lodge.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pesantrèn / pondhok</td>
+                <td>Religious boarding school for students of Islam.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pikul</td>
+                <td>Shoulder-load carrying weight (approx. 62 kgs / 136 lbs).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pradikan / pradikan ageng</td>
+                <td>Tax-free village set aside for religious pursuits or graveyard guardians.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">prajurit / prajurit keparak èstri / prajurit arahan</td>
+                <td>Palace soldier / Amazon corps / provincial levies.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">prang sabil</td>
+                <td>Holy war waged for Islamic religious ideals.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">priyayi</td>
+                <td>Official class in south-central Java (&quot;younger brothers of the ruler&quot;).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">pusaka</td>
+                <td>Holy regalia or sacred family heirloom.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">ratu / ratu adil / Ratu Kidul / Ratu Kedhaton</td>
+                <td>Principal official wife of a ruler / messianic &#x27;Just King&#x27; / Goddess of the Southern Ocean / title given to Dipanagara&#x27;s wife Radèn Ayu Maduretna in August 1825.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">santri / wong putihan</td>
+                <td>Pious Muslim student or follower / &quot;people dressed in white&quot;.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">sawah / tegal</td>
+                <td>Wet irrigated ricefield vs. dry crop field.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">sèh (syèh)</td>
+                <td>Title for high religious dignitaries and Arab scholars.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">selir</td>
+                <td>Secondary or unofficial wife of a prince or ruler.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">sénapati</td>
+                <td>Commander-in-Chief of an army.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">sengkala</td>
+                <td>Chronogram date or list.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">sentana</td>
+                <td>Royal family member or distant relative.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">Service Malay</td>
+                <td>Bureaucratic colonial language derided by Dipanagara as &quot;language of chickens.&quot;</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">sikep (kuli sikep)</td>
+                <td>Tax-paying peasant cultivator holding village land.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">strandgeld</td>
+                <td>Dutch compensation money paid for control of the north coast.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">tanah tiyasa</td>
+                <td>Family-endowed tax-free religious lands.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">tembang</td>
+                <td>Scanned verse used in Javanese chronicles.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">tumenggung</td>
+                <td>Title of high administrative rank given to bupati.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">ulama</td>
+                <td>Islamic scholars learned in jurisprudence (*fiqh*).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">wakil / wakil-dalem</td>
+                <td>Guardian or regent representing a minor ruler (e.g., Pangéran Mangkubumi for HB V).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">wali / Wali Sanga / Wali Wudhar</td>
+                <td>Apostles of Islam / Nine Apostles of Java / Dual spiritual-temporal apostle.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">wayang (kulit, purwa, wong, topèng)</td>
+                <td>Javanese puppet/dance theatre.</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">wedana</td>
+                <td>Senior administrative official (*bupati wedana*).</td>
+            </tr>
+            <tr data-cat="Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions">
+                <td><span class="tag">Cultural, Political, Legal, and Religious Concepts &amp; Glossary Definitions</span></td>
+                <td class="term-title">wong cilik</td>
+                <td>Common people.</td>
+            </tr>
+            <tr data-cat="Chronology, Calendar Concepts, and Year Cycles">
+                <td><span class="tag">Chronology, Calendar Concepts, and Year Cycles</span></td>
+                <td class="term-title">AJ (Anno Javano)</td>
+                <td>The Javanese lunar calendar era.</td>
+            </tr>
+            <tr data-cat="Chronology, Calendar Concepts, and Year Cycles">
+                <td><span class="tag">Chronology, Calendar Concepts, and Year Cycles</span></td>
+                <td class="term-title">AH (Anno Hijrae)</td>
+                <td>The Muslim calendar era.</td>
+            </tr>
+            <tr data-cat="Chronology, Calendar Concepts, and Year Cycles">
+                <td><span class="tag">Chronology, Calendar Concepts, and Year Cycles</span></td>
+                <td class="term-title">AD (Anno Domini)</td>
+                <td>The Western Gregorian calendar era.</td>
+            </tr>
+            <tr data-cat="Chronology, Calendar Concepts, and Year Cycles">
+                <td><span class="tag">Chronology, Calendar Concepts, and Year Cycles</span></td>
+                <td class="term-title">Windu Cycle</td>
+                <td>An eight-year lunar calendar cycle in the Javanese system.</td>
+            </tr>
+            <tr data-cat="Chronology, Calendar Concepts, and Year Cycles">
+                <td><span class="tag">Chronology, Calendar Concepts, and Year Cycles</span></td>
+                <td class="term-title">Eight Windu Years</td>
+                <td>*Alip* (1), *Éhé* (2), *Jimawal* (3), *Jé* (4), *Dal* (5), *Bé* (6), *Wawu* (7), *Jimakir* (8).</td>
+            </tr>
+            <tr data-cat="Chronology, Calendar Concepts, and Year Cycles">
+                <td><span class="tag">Chronology, Calendar Concepts, and Year Cycles</span></td>
+                <td class="term-title">Pasaran (Javanese 5-day Market Week)</td>
+                <td>*Legi*, *Pahing*, *Pon*, *Wage*, *Kliwon* (e.g., *Jumungah Wagé*).</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Babad Dipanagara (Manado version)</td>
+                <td>Dipanagara&#x27;s monumental autobiography written in exile in Manado (1831–1832).</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Babad Dipanagara (Surakarta version)</td>
+                <td>Surakarta-authored chronicle of the Java War.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Babad Dipanagaran Surya Ngalam</td>
+                <td>Allegorical historical chronicle written in exile by Dipanagara II.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Babad Bedhah ing Ngayogyakarta</td>
+                <td>Chronicle of the fall and looting of Yogyakarta in 1812.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Buku Kedhung Kebo</td>
+                <td>Historical chronicle authored by Ali Basah Kerta Pengalasan and Radèn Adipati Danureja V.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Babad Kraton, Babad Ngayogyakarta, Babad Pacitan, Babad Pakualam, Babad Tanah Jawi</td>
+                <td>Major Javanese historical chronicles.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Serat Centhini &amp; Serat Cabolang</td>
+                <td>Monumental 19th-century encyclopedic Javanese texts commissioned by Sunan PB V.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Serat Raja Kapa-Kapa, Jugul Mudha, Surya Ngalam, Praniti Kapa-Kapa</td>
+                <td>Javanese law codes and administrative manuals.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Taqrīb, Taqarrub, Lubāb al-fiqh, Muharrar, Uşul, Tafsir</td>
+                <td>Foundational texts on Muslim jurisprudence and theology.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Kitab Tuhfah (Al-Tuhfa al-mursala ilā rūh al-Nabī)</td>
+                <td>Sufi ontology on the &#x27;seven grades of being&#x27;.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Tāj as-Salāţīn &amp; Sirāt as-Salāţīn</td>
+                <td>Classical Islamic mirrors for princes and political philosophy manuals.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Bustān as-Salaţīn, Fateh al-Muluk, Naşīhat al-Muluk, Hikayat Makutha Raja</td>
+                <td>Didactic texts on statecraft.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Serat Rama, Serat Gandakusuma, Arjuna Wiwāha, Bhoma Kāwya, Arjuna Sasrabahu, Serat Suryaraja, Serat Ambiya, Sejarah Sétan lan Jim, Puja Kusuma, Angling Driya, Asmara Supi, Manikmaya, Ménak Amir Hamzah</td>
+                <td>Epic, literary, and wayang texts.</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Sejarah Ratu Tanah Jawa &amp; Hikayat Tanah Jawa</td>
+                <td>Dipanagara&#x27;s prose manuscripts written in exile in Makassar (1838).</td>
+            </tr>
+            <tr data-cat="Literary, Historical, and Religious Texts">
+                <td><span class="tag">Literary, Historical, and Religious Texts</span></td>
+                <td class="term-title">Serat Salasilah Para Leluhur ing Kadanurejan</td>
+                <td>Genealogical chronicle of the Danurejan family.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kangjeng Kyai Ageng Bandayuda</td>
+                <td>Dipanagara&#x27;s primary heirloom dagger carried into exile, melted down from three pusaka (*Sarutama*, *Barutuba*, *Abijaya*), and buried with him in Makassar.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kangjeng Kyai Naga Siluman</td>
+                <td>Dipanagara&#x27;s famous kris (&quot;Magician King of the Snakes&quot;) presented to King William I of the Netherlands in 1831.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Sarutama</td>
+                <td>Dagger/arrow (*cundrik*) received by Dipanagara at Parangkusuma c. 1805.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Barutuba</td>
+                <td>Heirloom pike carried by Ngusman Ali Basah, commander of the Bulkio regiment.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Abijaya</td>
+                <td>Inherited pusaka kris worn by Dipanagara at Tegalreja in July 1825.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Wisa Bintulu</td>
+                <td>Poisoned kraton kris requested back by Ratu Ageng in March 1820 due to prophecy of rule in Yogya.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Taslim</td>
+                <td>Master ironmaster/blacksmith (*ahli pethèk wesi pamor*) who evaluated the *Wisa Bintulu* kris.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Blabar &amp; Kyai Bromo Kedali</td>
+                <td>Heirloom kris given to Dipanagara II in Magelang.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Mundingwangi &amp; Kyai Rondhan</td>
+                <td>Heirloom pikes given to Dipanagara II in Magelang.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Habit &amp; Kyai Gagasono</td>
+                <td>Heirloom kris and pike given to Radèn Mas Jonèd in Magelang.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Dipayana</td>
+                <td>Heirloom kris given to Radèn Ajeng Impun in Magelang.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Bandung</td>
+                <td>Heirloom kris given to Radèn Ajeng Munthèng in Magelang.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Hatim &amp; Kyai Simo</td>
+                <td>Heirloom kris and pike given to Radèn Ayu Jayakusuma in Yogyakarta.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Wresa Gemilar &amp; Kyai Téja</td>
+                <td>Heirloom kris and pike given to Radèn Ayu Mertanagara in Yogyakarta.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Setoma &amp; Nyai Setomi</td>
+                <td>Famous court pusaka cannons.</td>
+            </tr>
+            <tr data-cat="Heirloom Weapons (Pusaka)">
+                <td><span class="tag">Heirloom Weapons (Pusaka)</span></td>
+                <td class="term-title">Kyai Gupita, Kyai Jingga, Kyai Betha, Kyai Birawa, Kyai Sangkelat, Kyai Kebo Kemili</td>
+                <td>Historic court heirloom weapons.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Bulkio</td>
+                <td>, *Turkio*, *Arkio*, *Barjumungah*, *Suryagama*, *Suranatan*: Dipanagara&#x27;s elite Java War regiments.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Prajurit keparak èstri</td>
+                <td>(Amazon corps): Javanese female royal bodyguards.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Ketanggung</td>
+                <td>, *Katanggel*, *Blambangan Sepuh*, *Daëng Secadipura*, *Trunasmara*: Kraton regiments.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Mangkunagaran Legion</td>
+                <td>: European-style military force created by Daendels.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">59th Foot</td>
+                <td>, *14th Foot*, *22nd Light Dragoons*, *78th Foot*: British line regiments.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Light Infantry Volunteer Battalion</td>
+                <td>, *3rd &amp; 4th Bengal Volunteer Battalions*, *7th Bengal Light Infantry*: Sepoy units in Java.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">6th, 7th, 11th Mobile Columns &amp; 16th, 17th, 18th Garrison Companies</td>
+                <td>: Dutch military units during the Java War.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">SS Van der Capellen</td>
+                <td>: First steamship in Netherlands Indies service, used to transport Dipanagara to Batavia in 1830.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Corvette Pollux</td>
+                <td>: Dutch naval vessel that carried Dipanagara to Manado (May–June 1830).</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Sloop Circe</td>
+                <td>: Naval schooner that carried Dipanagara to Makassar in 1833.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">HMS Modeste &amp; HMS Procris</td>
+                <td>: British warships in the 1811 Java expedition.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">De Hersteller, Aurora, The Regret</td>
+                <td>: Historical vessels.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Fort Vredenburg (Rustenburg)</td>
+                <td>: Dutch fort opposite the Yogya kraton.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Fort New Amsterdam (Manado)</td>
+                <td>: Dutch fort where Dipanagara was held (1830–1833).</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Fort Rotterdam (Makassar)</td>
+                <td>: Dutch fort where Dipanagara was imprisoned (1833–1855).</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Fort Victoria (Ambon)</td>
+                <td>: Dutch fort in Maluku.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Fort Cochius (Gombong)</td>
+                <td>: Fortress town built in Bagelèn.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Stadhuis (Batavia)</td>
+                <td>: Town House of Batavia where Dipanagara was held in April 1830.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Residency House (Magelang / Karesidenan Lama)</td>
+                <td>: Site of Dipanagara&#x27;s betrayal and arrest.</td>
+            </tr>
+            <tr data-cat="Military Regiments, Units, Ships, and Forts">
+                <td><span class="tag">Military Regiments, Units, Ships, and Forts</span></td>
+                <td class="term-title">Residency House (Bojong, Semarang)</td>
+                <td>: Site where Dipanagara stayed in April 1830.</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Pikul</td>
+                <td>: Shoulder load unit (61.761 kgs).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Padi &amp; Beras</td>
+                <td>: Unhusked rice vs. milled/husked rice.</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Bataviasche Courant</td>
+                <td>: Official government gazette publishing Java-wide rice quotations.</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Opium Farm (Candhu / Madat)</td>
+                <td>: Monopoly tax farm for prepared opium in Yogyakarta and its districts.</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Tollgates (Bandar / Rangkah / Salaran)</td>
+                <td>: Customs posts and subordinate collection stations along trade roads and rivers.</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Pasar Tax Farms</td>
+                <td>: Market lease farms (e.g., Pasar Yogya, Pasar Pacitan, Pasar Payaman, Pasar Magelang).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Gedhong Tembakau</td>
+                <td>: Customs warehouses for tobacco (e.g., Sibebek, Gunung Tawang).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Buffalo Slaughtering Tax (Tugel Gurung)</td>
+                <td>: Municipal/court tax levied on slaughtered buffaloes.</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Rupiah mas</td>
+                <td>: Gold rupee coined in Batavia (Dfl 19.20).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Half rupiah mas</td>
+                <td>: Half gold rupee (Dfl 9.60).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Dutch / Venetian ducats</td>
+                <td>: Gold coins in general circulation (Dfl 5.76 / 4.32).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Rose noble (Gold ducat)</td>
+                <td>: Worth 11 guilders (£0 19s 9d).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Silver ducatoon</td>
+                <td>: Minted in Holland (Dfl 3.20 / 3 guilders).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Half silver ducatoon</td>
+                <td>: Minted in Holland (Dfl 1.60).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Spanish dollar (Real batu / Real de a ocho / SpD)</td>
+                <td>: Standard international silver coin (Dfl 2.56).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Portuguese cruzado / German crown (franca)</td>
+                <td>: Old mutilated silver coin (*real batu*) in general circulation (Dfl 2.40).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Rijksdaalder (Rix dollar)</td>
+                <td>: Silver coin / government paper currency (Dfl 2.40 / Dfl 1.92 discounted).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Surat rupee &amp; Java rupee (rupiah / f)</td>
+                <td>: Standard silver coins in general circulation (Dfl 1.20).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Dutch guilder</td>
+                <td>: Silver coin (Dfl 0.80–1.20).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Half &amp; Quarter Dutch guilder</td>
+                <td>: 6 stuivers (Dfl 0.30–0.60).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Austrian-Netherlands schilling</td>
+                <td>: Silver coin worth 6 stuivers (Dfl 0.24).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Dubbeltje</td>
+                <td>: Dutch 10 cents piece / 2½ stuivers (Dfl 0.10–0.15).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Wang baru &amp; Tengah wang baru</td>
+                <td>: Poor quality copper coins produced at Tawangsari mint, Surabaya (2 stuivers = Dfl 0.10; 1 stuiver = Dfl 0.05).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Wang Bengal &amp; Half wang Bengal</td>
+                <td>: Small round copper coins imported from Bengal (Dfl 0.04–0.08).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Duit (dhuwit)</td>
+                <td>: VOC copper coins in general village circulation (Dfl 0.02).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Sigar (Half duit)</td>
+                <td>: Half copper duit (Dfl 0.01).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Stuiver</td>
+                <td>: Dutch copper penny piece (Dfl 0.04 / 4 duit).</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Penning</td>
+                <td>: 2 penning = 1 copper duit.</td>
+            </tr>
+            <tr data-cat="Currencies, Tax Farms, Agricultural Price Terms, &amp; Units">
+                <td><span class="tag">Currencies, Tax Farms, Agricultural Price Terms, &amp; Units</span></td>
+                <td class="term-title">Agio</td>
+                <td>: Exchange premium of 15–20% between local coins and Holland-minted currency.</td>
+            </tr>
+        </tbody>
+    </table>
+
     <script>
-        // Fetch and render the markdown dictionary
-        fetch('39_Expanded_Keyword_Index.md', { cache: 'no-store' })
-            .then(response => {
-                if (!response.ok) throw new Error('Failed to load dictionary file');
-                return response.text();
-            })
-            .then(text => {
-                // Configure marked to use tables properly
-                marked.setOptions({ gfm: true });
-                document.getElementById('dictionary-content').innerHTML = marked.parse(text);
-            })
-            .catch(error => {
-                document.getElementById('dictionary-content').innerHTML =
-                    `<div style="color:#ff6b6b; padding:20px; border:1px solid #ff6b6b;">Error loading dictionary: ${error.message}</div>`;
+        const searchInput = document.getElementById('searchInput');
+        const categorySelect = document.getElementById('categorySelect');
+        const rows = Array.from(document.querySelectorAll('#dictionaryBody tr'));
+        const statsBar = document.getElementById('statsBar');
+
+        function filterTable() {
+            const query = searchInput.value.toLowerCase().trim();
+            const selectedCat = categorySelect.value;
+            let visibleCount = 0;
+
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                const rowCat = row.getAttribute('data-cat');
+                
+                const matchesQuery = !query || text.includes(query);
+                const matchesCat = !selectedCat || rowCat === selectedCat;
+
+                if (matchesQuery && matchesCat) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
             });
+
+            statsBar.textContent = `Showing ${visibleCount} of ${rows.length} entries.`;
+        }
+
+        searchInput.addEventListener('input', filterTable);
+        categorySelect.addEventListener('change', filterTable);
+        filterTable();
     </script>
+
 </body>
 </html>
