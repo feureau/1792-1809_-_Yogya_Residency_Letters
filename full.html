@@ -215,6 +215,8 @@
         <p>Complete compilation of all historical transcriptions loaded into a single continuous reading stream.</p>
     </div>
 
+    <div id="collection-export-bar"></div>
+
     <div id="status-bar" class="status-bar">
         <span id="status-text">Initializing collection…</span>
         <span id="progress-indicator" class="progress-indicator">0%</span>
@@ -225,6 +227,9 @@
     <a href="#" class="back-to-top" id="backToTop" title="Back to top">↑</a>
 
     <script src="marked.min.js" defer></script>
+    <script src="js/vendor/fflate.min.js" defer></script>
+    <script src="js/vendor/pdf-lib.min.js" defer></script>
+    <script src="js/export.js" defer></script>
     <script>
 (async function () {
   "use strict";
@@ -303,6 +308,12 @@
 
     out.innerHTML = "";
     const mdCache = {};
+
+    if (window.CollectionExporter) {
+      window.CollectionExporter.mount(document.getElementById("collection-export-bar"), {
+        getMdCache: () => mdCache
+      });
+    }
 
     // Context-aware GitHub Issue reporting
     out.addEventListener("click", (e) => {

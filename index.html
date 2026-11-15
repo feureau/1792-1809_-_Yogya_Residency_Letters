@@ -213,6 +213,8 @@
     </div>
 </div>
 
+<div id="collection-export-bar"></div>
+
 <div class="description">
     <h4>About the Collection & Historical Background</h4>
     <p>
@@ -232,5 +234,16 @@
     <a href="https://github.com/feureau/1792-1809_-_Yogya_Residency_Letters">GitHub Repository</a> • 1792–1809 Yogyakarta Residency Letters Archive
 </footer>
 
+<script src="marked.min.js" defer></script>
+<script src="js/vendor/fflate.min.js" defer></script>
+<script src="js/vendor/pdf-lib.min.js" defer></script>
+<script src="js/export.js" defer></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.CollectionExporter) {
+      window.CollectionExporter.mount(document.getElementById("collection-export-bar"));
+    }
+  });
+</script>
 </body>
 </html>
